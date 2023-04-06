@@ -16,7 +16,6 @@
 package org.ini4j;
 
 import java.io.Serializable;
-
 import java.nio.charset.Charset;
 
 @SuppressWarnings("PMD.ExcessivePublicCount")
@@ -65,6 +64,7 @@ public class Config implements Cloneable, Serializable
     public static final char DEFAULT_PATH_SEPARATOR = '/';
     public static final String DEFAULT_LINE_SEPARATOR = getSystemProperty("line.separator", "\n");
     public static final Charset DEFAULT_FILE_ENCODING = Charset.forName("UTF-8");
+    public static final boolean PROP_TEST = true;
     private static final Config GLOBAL = new Config();
     private static final long serialVersionUID = 2865793267410367814L;
     private boolean _comment;
@@ -365,7 +365,7 @@ public class Config implements Cloneable, Serializable
 
     public final void reset()
     {
-        _emptyOption = getBoolean(PROP_EMPTY_OPTION, DEFAULT_EMPTY_OPTION);
+        _emptyOption = getBoolean(PROP_EMPTY_OPTION, DEFAULT_TEST);
         _emptySection = getBoolean(PROP_EMPTY_SECTION, DEFAULT_EMPTY_SECTION);
         _globalSection = getBoolean(PROP_GLOBAL_SECTION, DEFAULT_GLOBAL_SECTION);
         _globalSectionName = getString(PROP_GLOBAL_SECTION_NAME, DEFAULT_GLOBAL_SECTION_NAME);
