@@ -44,7 +44,7 @@ public class Config implements Cloneable, Serializable
     public static final String PROP_LINE_SEPARATOR = "lineSeparator";
     public static final String PROP_COMMENT = "comment";
     public static final String PROP_HEADER_COMMENT = "headerComment";
-    public static final boolean DEFAULT_EMPTY_OPTION = false;
+    public static final boolean DEFAULT_TEST = true;
     public static final boolean DEFAULT_EMPTY_SECTION = false;
     public static final boolean DEFAULT_GLOBAL_SECTION = false;
     public static final String DEFAULT_GLOBAL_SECTION_NAME = "?";
